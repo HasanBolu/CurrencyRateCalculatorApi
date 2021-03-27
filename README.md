@@ -4,6 +4,8 @@
 This is a .NET Core api that uses the contents of the XML file at https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml     
 (which gets updated regularly), and exposes an HTTP endpoint to retrieve the rate for a specific currency pair. For example, a GET request to http://localhost:5001/rate?currencypair=GBPUSD returns the rate to convert GBP to USD. 
 
+This api uses __Memory Cache__ and caches the rates of currencies and refresh the cache once an hour.
+
 ## Example Request
 https://localhost:50001/rate?currencyPair=GBPUSD
 
