@@ -33,7 +33,7 @@ namespace CurrencyRateCalculator.Controllers
             }
 
             var message = $"1 {currency1} = {rate:0.0000} {currency2}";
-            return Json(ResponseModel.GetResponse((int)HttpStatusCode.OK, message));
+            return Json(ResponseModel.GetResponse((int)HttpStatusCode.OK, message, new {rate = $"{rate:0.0000}"}));
         }
         
     }
