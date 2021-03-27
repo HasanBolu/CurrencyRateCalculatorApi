@@ -13,7 +13,10 @@ https://localhost:50001/rate?currencyPair=GBPUSD
 
 ```json
 {
-  "statusCode":200,
-  "message":"1 GBP = 1.3780 USD"
+    "statusCode": 200,
+    "message": "1 GBP = 1.3780 USD",
+    "data": {
+        "rate": "1.3780"
+    }
 }
 ```
