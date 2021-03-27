@@ -32,7 +32,8 @@ namespace CurrencyRateCalculator.Controllers
                 return Json(ResponseModel.GetResponse((int)HttpStatusCode.BadRequest, "Currency pair text is invalid."));
             }
 
-            return Json(ResponseModel.GetResponse((int)HttpStatusCode.OK,$"1 {currency1} => {rate} {currency2}"));
+            var message = $"1 {currency1} = {rate:0.0000} {currency2}";
+            return Json(ResponseModel.GetResponse((int)HttpStatusCode.OK, message));
         }
         
     }
